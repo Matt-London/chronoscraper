@@ -31,7 +31,7 @@ The scraper will write to a SQLite database file
 - `watches`: Contains the information about each watch
 - `reviews`: Contains the reviews for each watch
 
-These tables can be correlated using the watch_id variable which can be matched from the `watches` table to the `reviews` table
+These tables can be correlated using the `watch_id` variable which can be matched from the `watches` table to the `reviews` table
 
 ## Program Flow
 1. Scrape the index pages for watches
