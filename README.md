@@ -1,4 +1,4 @@
-# chrono-scraper
+# chronoscraper
 Scraper for the chrono24.com website
 
 ## Usage
