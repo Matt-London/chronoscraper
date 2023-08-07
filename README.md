@@ -32,3 +32,11 @@ The scraper will write to a SQLite database file
 - `reviews`: Contains the reviews for each watch
 
 These tables can be correlated using the watch_id variable which can be matched from the `watches` table to the `reviews` table
+
+## Program Flow
+1. Scrape the index pages for watches
+2. Scrape the watch pages for watch information
+3. Scrape the reviews from the watch page
+4. Write the data into two json files
+    - This is required as not all watch parameters are known until all keys are indexed and so a table cannot be created
+5. Write the data from the json files into a SQLite database
