@@ -1,3 +1,8 @@
+"""
+Module to handle scraping the page
+
+:author: Matt London
+"""
 from itertools import count
 from selenium import webdriver
 from selenium.webdriver.common.by import By

@@ -1,10 +1,15 @@
-from chronoscraper.scraper import get_watch_urls, get_watch_data, get_reviews
-from chronoscraper.databaseHandler import write_database_from_json
+"""
+Main file for the Chronoscraper project
 
+:author: Matt London
+"""
 import argparse
-import tqdm
 import json
 import os
+import tqdm
+
+from chronoscraper.scraper import get_watch_urls, get_watch_data, get_reviews
+from chronoscraper.database_handler import write_database_from_json
 
 
 def scrape_data(watches_json: str, reviews_json: str, watch_urls: list[str], timeout: int,
@@ -62,7 +67,8 @@ def main():
 
     parser.add_argument("database_path", help="Database file to write to")
     parser.add_argument("-t", "--timeout", default=10, help="Timeout for web requests")
-    parser.add_argument("-r", "--reviews", default=50, help="Maximum number of review pages to scrape for each watch")
+    parser.add_argument("-r", "--reviews", default=50,
+                        help="Maximum number of review pages to scrape for each watch")
     parser.add_argument("-p", "--pages", default=1, help="Maximum number of index pages to scrape")
 
     args = parser.parse_args()
