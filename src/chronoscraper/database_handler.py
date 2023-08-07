@@ -1,3 +1,8 @@
+"""
+Module to handle database functionality
+
+:author: Matt London
+"""
 import json
 import sqlite3
 
