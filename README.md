@@ -40,3 +40,15 @@ These tables can be correlated using the watch_id variable which can be matched 
 4. Write the data into two json files
     - This is required as not all watch parameters are known until all keys are indexed and so a table cannot be created
 5. Write the data from the json files into a SQLite database
+
+## Example
+In the `doc/` folder there is an example database file `watches.db`. This contains a scrape of the first two pages of the index and 10 pages of reviews from each watch.
+This database was generated with the following command:
+```bash
+python3 src/main.py -p 2 -r 10 doc/watches.db
+```
+
+### Parameters
+- `-p 2`: Scrape 2 pages of the index
+- `-r 10`: Scrape 10 pages of reviews for each watch
+- `doc/watches.db`: Write to the file `doc/watches.db`
