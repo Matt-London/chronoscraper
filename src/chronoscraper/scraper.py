@@ -68,7 +68,7 @@ def click_show_more_buttons(driver: WebDriver, timeout: int) -> None:
             continue
 
 
-def get_review(review: Tag, watch_id: int) -> dict[str, str] | None:
+def get_review(review: Tag, watch_id: int):
     """
     Take in a bs4 review and return a dictionary built from its data
 
